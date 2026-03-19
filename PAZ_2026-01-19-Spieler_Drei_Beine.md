@@ -37,9 +37,9 @@ Die Analyse zeigt einen schwarzen Spieler mit zwei normalen Beinen (mit dunklen 
 - Nummer 23 beim anderen schwarzen Spieler rechts
 
 #### Instabile/Auffällige Bildbereiche
-- Unterkörper des schwarzen Spielers links hinten
-- Zuordnung der beiden dunklen Beine
-- Anschlusszone Hüfte/Becken hinter dem roten Spieler
+- **Drittes Bein mit Haut**: Anatomisch unmögliches zusätzliches Beinsegment
+- **Verbindung zum Oberkörper**: Keine plausible anatomische Anbindung
+- **Positionierung**: Unlogische Platzierung rechts neben den normalen Beinen
 
 ### 4. Technische Analyse
 
@@ -49,9 +49,9 @@ Die Analyse zeigt einen schwarzen Spieler mit zwei normalen Beinen (mit dunklen 
 - **Plausible Bewegungsunschärfe** im Sportfotokontext
 
 #### Für Manipulation sprechende Faktoren
-- **Inkonsistente Körperzuordnung** bei einer Person
-- **Zwei Beinsegmente** ohne klaren anatomischen Anschluss
-- **Fehlende Hüftübergänge** zwischen Ober- und Unterkörper
+- **Drittes Bein mit sichtbarer Haut**: Anatomisch unmöglich
+- **Zusätztes Beinsegment**: Keine plausible anatomische Erklärung
+- **Drei Beine bei einer Person**: Klarer Manipulationsnachweis
 
 ## Bewertung der Anomalie
 
