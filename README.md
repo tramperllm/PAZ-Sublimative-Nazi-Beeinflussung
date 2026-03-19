@@ -31,6 +31,7 @@ Die folgenden Bilder zeigen die aufgedeckten Fakefotos vom 19. Januar 2026:
 
 ### Spieler mit drei Beinen
 - `PAZ_2026-01-19-Spieler_Drei_Beine.jpg`
+- [Analyse des Spielers mit drei Beinen](PAZ_2026-01-19-Spieler_Drei_Beine.md)
 
 ## Analyse
 
