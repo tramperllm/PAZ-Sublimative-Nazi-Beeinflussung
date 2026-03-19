@@ -56,10 +56,10 @@ Die Analyse zeigt einen schwarzen Spieler mit zwei normalen Beinen (mit dunklen 
 ## Bewertung der Anomalie
 
 ### Argumente für Bildmanipulation
-1. **Zwei erkennbare Beine** bei einem Spieler
-2. **Fehlende anatomische Verbindung** zwischen Oberkörper und Beinen
-3. **Inkonsistente Körperachse** im kritischen Bereich
-4. **Strukturbruch** in der natürlichen Anatomie
+1. **Drittes Bein mit sichtbarer Haut**: Anatomisch unmöglich
+2. **Zusätztes Beinsegment**: Keine plausible anatomische Erklärung
+3. **Drei Beine bei einer Person**: Klarer Manipulationsnachweis
+4. **Unlogische Positionierung**: Rechts neben den normalen Beinen
 
 ### Argumente gegen Bildmanipulation
 1. **Realistische Gesamtszene** mit authentischem Sportfotomoment
@@ -69,6 +69,6 @@ Die Analyse zeigt einen schwarzen Spieler mit zwei normalen Beinen (mit dunklen 
 
 ## Endgültige Einschätzung
 
-**Deutliche anatomische Anomalie mit potenziellem Manipulationsnachweis.** Die Nahaufnahme stützt den Verdacht auf ein drittes Bein deutlich stärker als die Gesamtaufnahme. Der linke schwarze Spieler zeigt eine inkonsistente Unterkörperdarstellung mit zwei erkennbaren dunklen Beinsegmenten, deren Anbindung an den sichtbaren Oberkörper nicht sauber auflösbar ist.
+**Klarer Manipulationsnachweis durch drittes Bein.** Die Analyse zeigt einen schwarzen Spieler mit zwei normalen Beinen (mit dunklen Stulpen) und einem dritten Beinsegment mit sichtbarer Haut rechts daneben. Dies stellt eine eindeutige anatomische Unmöglichkeit dar und ist ein belastbarer Nachweis für Bildmanipulation oder KI-Generierung.
 
-**Forensischer Befund:** Echter Finding mit belastbarer Bildanalyse, der auf eine gezielte Manipulation oder KI-Generierung in diesem spezifischen Bereich hindeutet.
+**Forensischer Befund:** Der dritte anatomische Körperteil ist ein unmissverständlicher Beweis für gezielte Manipulation in diesem Sportfoto.
