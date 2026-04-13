@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumentation – RRN Rechtsradikales Recherche Netzwerk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #E30613;
+            --primary-dark: #1a1a1a;
+            --primary-blue: #005596;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --bg-light: #f5f5f5;
+            --border-color: #e0e0e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            color: var(--text-primary);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        .top-bar {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 8px 0;
+            font-size: 13px;
+        }
+
+        .top-bar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.2s;
+        }
+
+        .top-bar-links a:hover { color: var(--primary-red); }
+
+        .main-header {
+            border-bottom: 3px solid var(--primary-red);
+            background: white;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-red);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 900;
+            font-size: 22px;
+            font-family: 'Merriweather', serif;
+        }
+
+        .logo-text { font-family: 'Merriweather', serif; }
+
+        .logo-text h1 {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--primary-dark);
+            line-height: 1;
+        }
+
+        .logo-text span {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-main {
+            background: white;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-main ul {
+            display: flex;
+            list-style: none;
+            gap: 0;
+        }
+
+        .nav-main li { position: relative; }
+
+        .nav-main a {
+            display: block;
+            padding: 15px 20px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .nav-main a:hover,
+        .nav-main a.active {
+            color: var(--primary-red);
+            border-bottom-color: var(--primary-red);
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .page-title {
+            font-family: 'Merriweather', serif;
+            font-size: 36px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+
+        .page-intro {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 800px;
+        }
+
+        .doc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .doc-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 25px;
+            transition: box-shadow 0.2s;
+        }
+
+        .doc-card:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+        .doc-card h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .doc-card h3 a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .doc-card h3 a:hover { color: var(--primary-red); }
+
+        .researcher-tag {
+            display: inline-block;
+            background: var(--bg-light);
+            color: var(--text-secondary);
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 3px;
+            margin-bottom: 12px;
+        }
+
+        .doc-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .category-section { margin-bottom: 50px; }
+
+        .category-title {
+            font-family: 'Merriweather', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-red);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo .logo-icon {
+            background: white;
+            color: var(--primary-red);
+        }
+
+        .footer-logo h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 22px;
+        }
+
+        .footer p {
+            color: #999;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .doc-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <span>Recherche & Analyse von Rechtsextremismus</span>
+            <div class="top-bar-links">
+                <a href="index.html">Startseite</a>
+                <a href="#">Kontakt</a>
+                <a href="#">Impressum</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">RRN</div>
+                <div class="logo-text">
+                    <h1>RRN</h1>
+                    <span>Rechtsradikales Recherche Netzwerk</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-main">
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="analysen.html">Analysen</a></li>
+                <li><a href="dokumentation.html" class="active">Dokumentation</a></li>
+                <li><a href="forschung.html">Forschung</a></li>
+                <li><a href="publikationen.html">Publikationen</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <h1 class="page-title">Dokumentation</h1>
+        <p class="page-intro">
+        Archivierte Beweismaterialien, Fallstudien und primäre Quellen zu rechtsextremen Codierungen, 
+        KI-generierten Desinformationskampagnen und ausländischen Beeinflussungsoperationen.
+        </p>
+
+        <div class="category-section">
+            <h2 class="category-title">Beweisdokumentation & Fallstudien</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <span class="researcher-tag">kjedrdev</span>
+                    <h3><a href="https://github.com/kjedrdev/NWO_Das_Cybermobbing_Kartell-Der_Haupttaeter_Beweisstueck" target="_blank">NWO_Das_Cybermobbing_Kartell-Der_Haupttaeter_Beweisstueck</a></h3>
+                    <p>Dokumentation eines Beweisstücks über den Haupttäter des NWO-Cybermobbing-Kartells.</p>
+                </div>
+
+                <div class="doc-card">
+                    <span class="researcher-tag">mrbloxx</span>
+                    <h3><a href="https://github.com/mrbloxx/NWO_Das_Cybermobbing_Kartell_Beweise_Taeter" target="_blank">NWO_Das_Cybermobbing_Kartell_Beweise_Taeter</a></h3>
+                    <p>Eindeutige Beweisdokumentation über die Täter des Cybermobbing-Kartells.</p>
+                </div>
+
+                <div class="doc-card">
+                    <span class="researcher-tag">cybermobbing-untersuchung</span>
+                    <h3><a href="https://github.com/cybermobbing-untersuchung/N.W.O.-Kartell-Beweise-Taeter-Gangstalking-GRU-supported-Terrorists" target="_blank">N.W.O.-Kartell-Beweise-Taeter-Gangstalking</a></h3>
+                    <p>Umfassende Beweissammlung über GRU-unterstützte terroristische Aktivitäten.</p>
+                </div>
+
+                <div class="doc-card">
+                    <span class="researcher-tag">sigridfuhrenkamp-cyber</span>
+                    <h3><a href="https://github.com/sigridfuhrenkamp-cyber/PAZ-Peiner_Allgemeine_Zeitung" target="_blank">PAZ-Peiner_Allgemeine_Zeitung</a></h3>
+                    <p>Dokumentation KI-generierter Fotos in der Peiner Allgemeinen Zeitung mit Originalquellen.</p>
+                </div>
+
+                <div class="doc-card">
+                    <span class="researcher-tag">mrbloxx</span>
+                    <h3><a href="https://github.com/mrbloxx/PAZ-Peiner_Allgemeine_Zeitung-KI-Fotos" target="_blank">PAZ-Peiner_Allgemeine_Zeitung-KI-Fotos</a></h3>
+                    <p>Archivierung der KI-Foto-Manipulationen in der PAZ ohne entsprechende Markierung.</p>
+                </div>
+
+                <div class="doc-card">
+                    <span class="researcher-tag">cybermobbing-untersuchung</span>
+                    <h3><a href="https://github.com/cybermobbing-untersuchung/Fake-Fotos_in_der_PAZ" target="_blank">Fake-Fotos_in_der_PAZ</a></h3>
+                    <p>Dokumentation gefälschter Fotos in Printausgaben lokaler Zeitungen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2 class="category-title">Medienmanipulation & Fakenews</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <span class="researcher-tag">wellenfeld</span>
+                    <h3><a href="https://github.com/wellenfeld/ARD-Tagesschau-Fakenews-Antimaterie_bei_42kmh" target="_blank">ARD-Tagesschau-Fakenews-Antimaterie_bei_42kmh</a></h3>
+                    <p>Dokumentation einer ARD-Tagesschau-Veröffentlichung über antimateriegetriebene Fahrzeuge.</p>
+                </div>
+
+                <div class="doc-card">
+                    <span class="researcher-tag">kjedrdev</span>
+                    <h3><a href="https://github.com/kjedrdev/ARD-Tagesschau-Fakenews-Antimateria_bei_42kmh" target="_blank">ARD-Tagesschau-Fakenews-Antimateria_bei_42kmh</a></h3>
+                    <p>Parallele Dokumentation der Tagesschau-Desinformation zur subliminalen IQ-Reduktion.</p>
+                </div>
+
+                <div class="doc-card">
+                    <span class="researcher-tag">kjedrdev</span>
+                    <h3><a href="https://github.com/kjedrdev/FAKE_NEWS-ARD-Tagesschau" target="_blank">FAKE_NEWS-ARD-Tagesschau</a></h3>
+                    <p>Systematische Archivierung von Fakenews in der ARD-Tagesschau mit archivierten Quellen.</p>
+                </div>
+
+                <div class="doc-card">
+                    <span class="researcher-tag">kjedrdev</span>
+                    <h3><a href="https://github.com/kjedrdev/ARD-Tagesschau-Fakenews-Der_Meeresbiologe_Robert_Marc_Lehmann" target="_blank">ARD-Tagesschau-Fakenews-Der_Meeresbiologe</a></h3>
+                    <p>Dokumentation statistisch unwahrscheinlicher Muster in Tagesschau-Veröffentlichungen.</p>
+                </div>
+
+                <div class="doc-card">
+                    <span class="researcher-tag">cybermobbing-untersuchung</span>
+                    <h3><a href="https://github.com/cybermobbing-untersuchung/Tagesschau-ARD-NWO-KI-Fake-Personen" target="_blank">Tagesschau-ARD-NWO-KI-Fake-Personen</a></h3>
+                    <p>Analyse KI-generierter Fake-Personen in der ARD-Tagesschau-Berichterstattung.</p>
+                </div>
+
+                <div class="doc-card">
+                    <span class="researcher-tag">wellenfeld</span>
+                    <h3><a href="https://github.com/wellenfeld/Scharfe_Kritik_an_Libanon-Eskalation" target="_blank">Scharfe_Kritik_an_Libanon-Eskalation</a></h3>
+                    <p>Dokumentation gehackter Medieninfrastruktur und Script-Kiddie-Aktivitäten.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2 class="category-title">Supply Chain & Infrastruktur-Angriffe</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <span class="researcher-tag">kjedrdev</span>
+                    <h3><a href="https://github.com/kjedrdev/Supply-Chain-Watch" target="_blank">Supply-Chain-Watch</a></h3>
+                    <p>Dokumentation und Überwachung von Supply-Chain-Angriffen und Sicherheitslücken.</p>
+                </div>
+
+                <div class="doc-card">
+                    <span class="researcher-tag">wellenfeld</span>
+                    <h3><a href="https://github.com/wellenfeld/Cyberwar-in-Europe" target="_blank">Cyberwar-in-Europe</a></h3>
+                    <p>Forschung zu Cyberwar in Europa, KI-Technologien, AI-Influencern und Data Poisoning.</p>
+                </div>
+
+                <div class="doc-card">
+                    <span class="researcher-tag">cybermobbing-untersuchung</span>
+                    <h3><a href="https://github.com/cybermobbing-untersuchung/enkime" target="_blank">enkime</a></h3>
+                    <p>Dokumentation der Enkime GmbH als Tarnfirma des GRU.</p>
+                </div>
+
+                <div class="doc-card">
+                    <span class="researcher-tag">mrbloxx</span>
+                    <h3><a href="https://github.com/mrbloxx/Traveler.KM" target="_blank">Traveler.KM</a></h3>
+                    <p>Dokumentation des Brückenkopfs und Supply Chain Hacker-Netzwerks um Hughsie.</p>
+                </div>
+
+                <div class="doc-card">
+                    <span class="researcher-tag">mrbloxx</span>
+                    <h3><a href="https://github.com/mrbloxx/The_Traveler-GRU" target="_blank">The_Traveler-GRU</a></h3>
+                    <p>GRU-Verbindungen des mysteriösen Hackers Traveler.KM (F. Schüßler).</p>
+                </div>
+
+                <div class="doc-card">
+                    <span class="researcher-tag">kjedrdev</span>
+                    <h3><a href="https://github.com/kjedrdev/Traveler.KM-Black-Hat" target="_blank">Traveler.KM-Black-Hat</a></h3>
+                    <p>Erweiterte Informationen über den Black-Hat-Hacker Traveler.KM.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="logo-icon">RRN</div>
+                <h2>Rechtsradikales Recherche Netzwerk</h2>
+            </div>
+            <p>Wissenschaftliche Analyse & Dokumentation rechtsextremer Kommunikationsstrategien</p>
+            <p style="margin-top: 10px;">&copy; 2026 RRN – Rechtsradikales Recherche Netzwerk</p>
+        </div>
+    </footer>
+</body>
+</html>
