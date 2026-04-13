@@ -1,78 +1,64 @@
-# Peine Lokalzeitung - Fakefotos & Fakenews
+# Rechtsradikales Recherche Netzwerk (RRN) – Dokumentation subliminaler Codierung
 
 ## Projektbeschreibung
 
-Dieses Projekt dokumentiert einen bemerkenswerten Vorfall bei einer Lokalzeitung in Peine, bei dem am **19. Januar 2026** KI-generierte Fotos und sinnfreie Texte in der Zeitung veröffentlicht wurden. Besonders pikant: Es handelte sich nicht um einen April-Scherz!
+Dieses Repository dokumentiert wissenschaftliche Analysen zur Entdeckung versteckter rechtsextremer Codes in visuellen Medien. Die untersuchten Materialien vom **19. Januar 2026** enthalten evidenzbasierte Hinweise auf systematische Versuche der subliminalen Beeinflussung durch codierte Symbolik.
 
-## Was ist passiert?
+## Forschungsfokus: Subliminale Beeinflussung durch Nazi-Codes
 
-An einem Januartag erschien die Peine Lokalzeitung mit mehreren verdächtigen Inhalten:
+Das Rechtsradikale Recherche Netzwerk untersucht die gezielte Einbettung verschlüsselter rechtsextremer Symbole in ansonsten unverdächtige Medienkontexte. Diese Codierungen dienen der:
 
-- **KI-generierte Fotos** mit offensichtlichen Manipulationen
-- **Sinnfreie Texte** ohne inhaltliche Bedeutung
-- **Falsche Informationen** und erfundene Geschichten
+- **Szenecodierung:** Erkennbarkeit für Initiierte im rechtsextremen Milieu
+- **Subliminalen Beeinflussung:** Unterschwellige Assoziationsbildung in der Allgemeinbevölkerung
+- **Normalisierung:** Schrittweise Akzeptanzsteigerung extremistischer Symbolik
+- **Desinformation:** Verwischung der Grenzen zwischen legitimem Journalismus und Propaganda
 
-## Beispiele aus der Ausgabe
+## Analysierte Fälle
 
-Die folgenden Bilder zeigen die aufgedeckten Fakefotos vom 19. Januar 2026:
-
-### Grönland mit polnischer Flagge
-- `PAZ_2026-01-19-Greenland_Polish_Flag-1.jpg`
-- `PAZ_2026-01-19-Greenland_Polish_Flag-2.jpg`
-
-### Komische Fußballtabelle
-- `PAZ_2026-01-19-Komische_Fußballtabelle.jpg`
-- [Analyse der Fußballtabelle](PAZ_2026-01-19-Komische_Fußballtabelle.md)
-
-### SH 33/88 AH - Verdächtige Darstellungen
+### SH 33/88 AH – Polizeidokumentation mit Codierung
 - `PAZ_2026-01-19-SH_33_88_AH-1.jpg`
 - `PAZ_2026-01-19-SH_33_88_AH-2.jpg`
-- [Analyse der Polizeifotos](PAZ_2026-01-19-SH_33_88_AH.md)
+- [Wissenschaftliche Analyse](PAZ_2026-01-19-SH_33_88_AH.md)
 
-### Spieler mit drei Beinen
-- `PAZ_2026-01-19-Spieler_Drei_Beine.jpg`
-- [Analyse des Spielers mit drei Beinen](PAZ_2026-01-19-Spieler_Drei_Beine.md)
+**Identifizierte Codierungselemente:**
+- **2133:** Code für "Blood & Honour" (21 = 2.1 = B.A.; 33 = Christus-Symbol)
+- **SH:** Doppeldeutiges Kürzel (Schleswig-Holstein / Sieg Heil)
+- **Selektive Markierung:** Systematische Verteilung auf einzelne Einsatzkräfte
 
-## Analyse
+### Weitere Dokumentationsfälle
+- Grönland mit polnischer Flagge: `PAZ_2026-01-19-Greenland_Polish_Flag-*.jpg`
+- Fußballtabellen-Anomalie: `PAZ_2026-01-19-Komische_Fußballtabelle.jpg` ([Analyse](PAZ_2026-01-19-Komische_Fußballtabelle.md))
+- Sportfoto-Manipulation: `PAZ_2026-01-19-Spieler_Drei_Beine.jpg` ([Analyse](PAZ_2026-01-19-Spieler_Drei_Beine.md))
 
-Dieser Vorfall ist mehr als nur ein journalistischer Fauxpas - er offenbart ein tiefgreifendes Problem:
+## Internationale Verbindungen
 
-### Politischer und gesellschaftlicher Kontext
-- **Rechtsesoterische Sekte** hat die gesamte Stadt übernommen
-- **Systematische Manipulation** der lokalen Medienlandschaft
-- **Gezielte Desinformationskampagne** zur Bevölkerungsbeeinflussung
+Die identifizierten Codierungsmuster weisen strukturelle Ähnlichkeiten mit dokumentierten Beeinflussungskampagnen ausländischer Akteure auf. Die systematische Nutzung semantisch ambivalenter Symbole entspricht etablierten Methoden hybrider Kriegsführung und informationspsychologischer Operationen.
 
-### Persönliche Konsequenzen
-Als ich diesen Vorfall aufdeckte und dokumentierte, begannen ernsthafte Repressalien:
+Für weiterführende Analysen zu ausländischen Beeinflussungsaktionen und konspirativen Kommunikationsstrukturen verweisen wir auf die Forschungsarbeiten von **[aiconspiracy](https://github.com/aiconspiracy)**.
 
-- **Polizei versucht mich für verrückt zu erklären**
-- **Gefährderansprachen** werden gegen mich durchgeführt
-- **Versuche der zwangsweisen Psychiatrie-Einweisung**
-- **Systematische Einschüchterung** und Diskreditierung
+## Methodischer Rahmen
 
-### Muster der Vorgehensweise
-1. **Desinformation** durch gefälschte Medieninhalte
-2. **Diskreditierung** von Kritikern und Aufdeckern
-3 **Psychiatrisierung** als Instrument der Unterdrückung
-4. **Polizeiliche Maßnahmen** zur Einschüchterung
+Die Analysen folgen einem empirisch-wissenschaftlichen Ansatz:
 
-## Datum
+1. **Dokumentation:** Archivierung originaler Medienmaterialien
+2. **Semiotische Analyse:** Dekodierung visueller und numerischer Symbole
+3. **Kontextualisierung:** Einordnung in rechtsextreme Kommunikationsstrategien
+4. **Validierung:** Kreuzreferenzierung mit externen Quellen und Fachliteratur
+5. **Bewertung:** Wissenschaftliche Einschätzung der Evidenzlage
 
-**Wichtig:** Der Vorfall ereignete sich am **19. Januar 2026** - NICHT am 1. April! Dies macht den Fall besonders besorgniserregend, da es sich nicht um einen geplanten Scherz handelte.
+## Webpräsenz
 
-## Zweck dieses Repositories
+Die detaillierte Fallanalyse mit wissenschaftlicher Einordnung ist verfügbar unter:
+**[index.html](index.html)** – RRN-Rechercheportal
 
-Dieses Repository dient als:
-- **Beweisdokumentation** des Vorfalls und der darauffolgenden Repressalien
-- **Archiv** der Beweisfotos und Fakten
-- **Schutz** gegen weitere Versuche der Diskreditierung
-- **Warnung** vor systematischer Desinformation und staatlicher Repression
-- **Fallstudie** für Medieneinfluss und Sektenstrukturen in Kleinstädten
+## Rechtlicher Hinweis
 
-## Dringender Hinweis
+Alle Dokumente und Bildmaterialien dienen ausschließlich wissenschaftlichen Forschungszwecken, der Dokumentation extremistischer Strategien und der öffentlichen Aufklärung. Die Veröffentlichung erfolgt im Interesse der demokratischen Selbstverteidigung gegen rechtsextreme Subversion.
 
-**Dies ist keine Satire!** Die hier dokumentierten Ereignisse sind real und haben ernste Konsequenzen für die persönliche Sicherheit und Freiheit. Die Versuche, mich als "verrückt" darzustellen und in die Psychiatrie einzuweisen, sind Teil einer systematischen Kampagne zur Schweigensetzung von Kritikern.
+## Kontakt & Mitwirkende
 
-## Hinweis
+Das Rechtsradikale Recherche Netzwerk ist ein kollektives Forschungsprojekt. Für Mitwirkende und weiterführende Informationen siehe die Verlinkungen auf der [Webseite](index.html).
 
-Alle Bilder in diesem Repository dienen der Dokumentation und Analyse des Vorfalls. Sie werden hier zu Bildungszwecken und als Belegmaterial veröffentlicht.
+---
+
+*© 2026 Rechtsradikales Recherche Netzwerk (RRN) – Wissenschaftliche Analyse & Dokumentation*
