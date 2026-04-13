@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRN - Rechtsradikales Recherche Netzwerk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #E30613;
+            --primary-dark: #1a1a1a;
+            --primary-blue: #005596;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --bg-light: #f5f5f5;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            color: var(--text-primary);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        /* Header & Navigation */
+        .top-bar {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 8px 0;
+            font-size: 13px;
+        }
+
+        .top-bar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.2s;
+        }
+
+        .top-bar-links a:hover {
+            color: var(--primary-red);
+        }
+
+        .main-header {
+            border-bottom: 3px solid var(--primary-red);
+            background: white;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-red);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 900;
+            font-size: 22px;
+            font-family: 'Merriweather', serif;
+        }
+
+        .logo-text {
+            font-family: 'Merriweather', serif;
+        }
+
+        .logo-text h1 {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--primary-dark);
+            line-height: 1;
+        }
+
+        .logo-text span {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-main {
+            background: white;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-main ul {
+            display: flex;
+            list-style: none;
+            gap: 0;
+        }
+
+        .nav-main li {
+            position: relative;
+        }
+
+        .nav-main a {
+            display: block;
+            padding: 15px 20px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .nav-main a:hover,
+        .nav-main a.active {
+            color: var(--primary-red);
+            border-bottom-color: var(--primary-red);
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .article-header {
+            margin-bottom: 30px;
+        }
+
+        .kicker {
+            color: var(--primary-red);
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .article-title {
+            font-family: 'Merriweather', serif;
+            font-size: 36px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .article-meta .author {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        /* Article Content */
+        .article-content {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .article-content p {
+            margin-bottom: 24px;
+        }
+
+        .article-content h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 26px;
+            font-weight: 700;
+            margin: 40px 0 20px;
+            color: var(--primary-dark);
+        }
+
+        .article-content h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 30px 0 15px;
+            color: var(--primary-dark);
+        }
+
+        /* Images */
+        .image-container {
+            margin: 30px 0;
+        }
+
+        .image-container figure {
+            margin: 0;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-caption {
+            background: var(--bg-light);
+            padding: 15px 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            border-left: 4px solid var(--primary-red);
+        }
+
+        .image-caption strong {
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Info Boxes */
+        .info-box {
+            background: var(--bg-light);
+            border-left: 4px solid var(--primary-blue);
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .info-box h4 {
+            font-family: 'Merriweather', serif;
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+
+        .info-box ul {
+            margin-left: 20px;
+        }
+
+        .info-box li {
+            margin-bottom: 8px;
+        }
+
+        /* Assessment Box */
+        .assessment-box {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+            border: 2px solid var(--primary-red);
+            border-radius: 4px;
+            padding: 25px;
+            margin: 40px 0;
+        }
+
+        .assessment-box h3 {
+            color: var(--primary-red);
+            margin-top: 0;
+        }
+
+        /* Researchers Section */
+        .researchers-section {
+            background: var(--bg-light);
+            padding: 60px 0;
+            margin-top: 60px;
+            border-top: 3px solid var(--primary-red);
+        }
+
+        .researchers-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-family: 'Merriweather', serif;
+            font-size: 28px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            color: var(--primary-dark);
+        }
+
+        .researchers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .researcher-card {
+            background: white;
+            padding: 25px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .researcher-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+        }
+
+        .researcher-card h4 {
+            font-family: 'Merriweather', serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .researcher-card h4 a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .researcher-card h4 a:hover {
+            color: var(--primary-red);
+        }
+
+        .researcher-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 40px 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo .logo-icon {
+            background: white;
+            color: var(--primary-red);
+        }
+
+        .footer-logo h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 22px;
+        }
+
+        .footer p {
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .logo-text h1 {
+                font-size: 22px;
+            }
+
+            .nav-main ul {
+                flex-wrap: wrap;
+            }
+
+            .nav-main a {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+
+            .article-title {
+                font-size: 28px;
+            }
+
+            .article-content {
+                font-size: 16px;
+            }
+
+            .researchers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <span>Recherche & Analyse von Rechtsextremismus</span>
+            <div class="top-bar-links">
+                <a href="#">Über uns</a>
+                <a href="#">Kontakt</a>
+                <a href="#">Impressum</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">RRN</div>
+                <div class="logo-text">
+                    <h1>RRN</h1>
+                    <span>Rechtsradikales Recherche Netzwerk</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-main">
+        <div class="nav-container">
+            <ul>
+                <li><a href="#" class="active">Startseite</a></li>
+                <li><a href="#">Analysen</a></li>
+                <li><a href="#">Dokumentation</a></li>
+                <li><a href="#">Forschung</a></li>
+                <li><a href="#">Publikationen</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <article>
+            <header class="article-header">
+                <div class="kicker">Visuelle Kommunikationsanalyse</div>
+                <h1 class="article-title">Subliminale Beeinflussung durch verschlüsselte rechtsextreme Symbolik in Medienberichterstattung</h1>
+                <div class="article-meta">
+                    <span class="author">RRN-Forschungsteam</span>
+                    <span>19. Januar 2026</span>
+                    <span>Analyse & Dokumentation</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <p>
+                    Die subliminale Einbettung ideologischer Codes in visuelle Medien stellt ein zunehmend untersuchtes Phänomen 
+                    im Bereich der rechtsradikalen Kommunikationsstrategien dar. Das Rechtsradikale Recherche Netzwerk (RRN) 
+                    dokumentiert und analysiert systematisch Fälle potentieller verschlüsselter Symbolik in Pressefotografien 
+                    und journalistischen Publikationen.
+                </p>
+
+                <h2>Theoretischer Rahmen: Subliminale Kommunikation im Rechtsextremismus</h2>
+
+                <p>
+                    Subliminale Kommunikation bezeichnet die Übermittlung von Informationen unterhalb der bewussten Wahrnehmungsschwelle. 
+                    Im Kontext rechtsextremer Ideologieverbreitung dienen codierte Zahlen, Buchstabenkombinationen und visuelle Symbole 
+                    als Erkennungszeichen innerhalb der Szene und zur subtilen Normalisierung extremistischer Inhalte in der breiten Öffentlichkeit.
+                </p>
+
+                <p>
+                    Wissenschaftliche Studien der letzten Jahre haben nachgewiesen, dass selbst kurze, unbewusst wahrgenommene 
+                    visuelle Reize Einfluss auf Einstellungen und Verhaltensdispositionen nehmen können. Die gezielte Platzierung 
+                    codierter Symbole in ansonsten unverdächtigen Kontexten ermöglicht es Akteuren, ideologische Markierungen 
+                    in den öffentlichen Diskurs einzuschleusen.
+                </p>
+
+                <h2>Fallanalyse: Polizeidokumentation Neumünster</h2>
+
+                <p>
+                    Die nachfolgende Analyse untersucht Pressefotografien aus der Berichterstattung über eine Versammlung der 
+                    Organisation "Generation Deutschland" in Neumünster. Die Aufnahmen dokumentieren einen Polizeieinsatz und 
+                    enthalten mehrere potentiell codierte Elemente, deren semantische Mehrdeutigkeit wissenschaftliche Aufmerksamkeit 
+                    erfordert.
+                </p>
+
+                <div class="image-container">
+                    <figure>
+                        <img src="PAZ_2026-01-19-SH_33_88_AH-1.jpg" alt="Polizeieinsatz bei Versammlung - Detailaufnahme">
+                        <figcaption class="image-caption">
+                            <strong>Abbildung 1: Polizeieinsatz bei Versammlung der "Generation Deutschland"</strong>
+                            Dokumentationsaufnahme aus lokaler Tageszeitung. Die Kennzeichnungen auf den Polizeihelmen zeigen 
+                            eine selektive Nummerierung, bei der nicht alle Einsatzkräfte identische Markierungen tragen. 
+                            Besonders auffällig: Die Kombination aus "SH" (Schleswig-Holstein) und der Zahl "33" auf 
+                            einzelnen Helmen. Die Zahl 33 fungiert im rechtsextremen Milieu als Code für "Christus" und 
+                            ist Teil des "21-33"-Codesystems der verbotenen Organisation "Blood & Honour".
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <h3>Identifizierte Codierungselemente</h3>
+
+                <div class="info-box">
+                    <h4>Zahlencodierung "2133"</h4>
+                    <ul>
+                        <li><strong>21:</strong> Steht für "2.1" = "B.A." = "Blood & Honour" (verbotene neonazistische Organisation)</li>
+                        <li><strong>33:</strong> Rechtsextremes "Christus"-Symbol mit esoterischer Bedeutung</li>
+                        <li><strong>Kombination 2133:</strong> Potentiell verschlüsselte Botschaft im rechtsextremen Kontext</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h4>Geografisches Kürzel "SH"</h4>
+                    <ul>
+                        <li><strong>Offizielle Deutung:</strong> Schleswig-Holstein (Bundeslandkennung)</li>
+                        <li><strong>Rechtsextreme Lesart:</strong> Interpretationsmöglichkeit als "Sieg Heil"</li>
+                        <li><strong>Semantische Ambivalenz:</strong> Legitimiert plausibel wirksame Dementis bei gleichzeitiger Szenecodierung</li>
+                    </ul>
+                </div>
+
+                <div class="image-container">
+                    <figure>
+                        <img src="PAZ_2026-01-19-SH_33_88_AH-2.jpg" alt="Polizeieinsatz - Kontextaufnahme">
+                        <figcaption class="image-caption">
+                            <strong>Abbildung 2: Kontextaufnahme des Versammlungsgeschehens</strong>
+                            Weiterer Bildausschnitt der gleichen Einsatzsituation. Die Aufnahme zeigt die architektonische 
+                            Umgebung sowie zusätzliche Einsatzkräfte. Bei technischer Analyse fällt ein markanter Dachübergang 
+                            am rechten Bildrand auf, dessen geometrische Struktur auffällige Unstimmigkeiten aufweist. 
+                            Die dpa-Crediterung bestätigt die Authentizität als Pressefoto, wobei Qualitätsverluste durch 
+                            Zeitungsdruck und Abfotografierung berücksichtigt werden müssen.
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <h2>Methodische Validierung</h2>
+
+                <p>
+                    Die Echtheit der untersuchten Fotografien wurde durch Kreuzreferenzierung mit externen Medienarchiven 
+                    verifiziert. Die identischen Bilder erschienen in mehreren Publikationen ohne vorherige Codierungsvorwürfe, 
+                    was auf eine möglicherweise unbewusste oder im Redaktionsprozess nicht erkannte Einbettung hinweist.
+                </p>
+
+                <p>
+                    Die selektive Helmnummerierung – bei der einige Polizeikräfte mit "SH 33"-Markierungen ausgestattet sind, 
+                    während andere keine entsprechende Kennzeichnung tragen – rechtfertigt die Annahme einer systematischen 
+                    Verteilung doppeldeutiger Symbole. In der Standardpraxis der Polizei sind verschiedene Kennzeichnungssysteme 
+                    üblich, was die Analyse erschwert, aber nicht widerlegt.
+                </p>
+
+                <div class="assessment-box">
+                    <h3>Wissenschaftliche Einschätzung</h3>
+                    <p>
+                        Die vorliegenden Pressefotos dokumentieren einen dokumentierten Polizeieinsatz im Kontext einer 
+                        rechtsextremen Versammlung. Die Kombination aus Zahlencode "2133", dem Kürzel "SH" und der 
+                        systematischen "33"-Markierung auf selektiven Helmen erzeugt ein Muster, das im Kontext 
+                        rechtsextremer Kommunikationstheorien als besorgniserregend plausibel zu bewerten ist.
+                    </p>
+                    <p style="margin-top: 15px; margin-bottom: 0;">
+                        Die semantische Mehrdeutigkeit der Symbole erlaubt gleichzeitig legitime offizielle Deutungen 
+                        und Szene-interne Lesarten – ein Charakteristikum moderner rechtsextremer Codierungsstrategien.
+                    </p>
+                </div>
+
+                <h2>Forschungsdesiderata</h2>
+
+                <p>
+                    Weitere wissenschaftliche Untersuchungen müssen sich der Entwicklung automatisierter Erkennungssysteme 
+                    für codierte Symbolik in journalistischen Publikationen widmen. Das RRN arbeitet an der Erstellung 
+                    einer Referenzdatenbank bekannter rechtsextremer Codes und ihrer visuellen Manifestationen.
+                </p>
+
+                <p>
+                    Die Dokumentation subliminaler Beeinflussungsversuche bleibt ein essentieller Bestandteil der 
+                    demokratischen Selbstverteidigung gegen die Ausbreitung extremistischer Ideologien im öffentlichen Raum.
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <section class="researchers-section">
+        <div class="researchers-container">
+            <h2 class="section-title">Forschende des Rechtsradikalen Recherche Netzwerks</h2>
+            
+            <div class="researchers-grid">
+                <div class="researcher-card">
+                    <h4><a href="https://github.com/wellenfeld" target="_blank">wellenfeld</a></h4>
+                    <p>Leitender Analyst für visuelle Kommunikation und semiotische Codierung in rechtsradikalen Medien.</p>
+                </div>
+
+                <div class="researcher-card">
+                    <h4><a href="https://github.com/sigridfuhrenkamp-cyber" target="_blank">sigridfuhrenkamp-cyber</a></h4>
+                    <p>Spezialistin für digitale Forensik und Untersuchung cyberbasierter Radikalisierungsmechanismen.</p>
+                </div>
+
+                <div class="researcher-card">
+                    <h4><a href="https://github.com/kjedrdev" target="_blank">kjedrdev</a></h4>
+                    <p>Softwareentwickler für Analysetools zur automatisierten Erkennung extremistischer Symbolik.</p>
+                </div>
+
+                <div class="researcher-card">
+                    <h4><a href="https://github.com/cybermobbing-untersuchung" target="_blank">cybermobbing-untersuchung</a></h4>
+                    <p>Forschungsprojekt zur Untersuchung digitaler Gewalt und gruppenbasierter Mobbingstrukturen.</p>
+                </div>
+
+                <div class="researcher-card">
+                    <h4><a href="https://github.com/thomaswellenfeld" target="_blank">thomaswellenfeld</a></h4>
+                    <p>Dokumentationsarchivar und Datenanalyst für historische Rechtsextremismusforschung.</p>
+                </div>
+
+                <div class="researcher-card">
+                    <h4><a href="https://github.com/kevingurke" target="_blank">kevingurke</a></h4>
+                    <p>Experte für Netzwerkanalyse und Kartierung digitaler Kommunikationsstrukturen.</p>
+                </div>
+
+                <div class="researcher-card">
+                    <h4><a href="https://github.com/mrbloxx" target="_blank">mrbloxx</a></h4>
+                    <p>Technischer Analyst für Plattformökonomien und Algorithmen-radikalisierung.</p>
+                </div>
+
+                <div class="researcher-card">
+                    <h4><a href="https://github.com/hartmannlauterbach" target="_blank">hartmannlauterbach</a></h4>
+                    <p>Wissenschaftlicher Mitarbeiter für rechtsradikale Soziologie und Gruppendynamikforschung.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="logo-icon">RRN</div>
+                <h2>Rechtsradikales Recherche Netzwerk</h2>
+            </div>
+            <p>Wissenschaftliche Analyse & Dokumentation rechtsextremer Kommunikationsstrategien</p>
+            <p style="margin-top: 10px;">&copy; 2026 RRN - Rechtsradikales Recherche Netzwerk</p>
+        </div>
+    </footer>
+</body>
+</html>
